@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela</title>
+    <style>
+           table{
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(27, 100, 177,1);
+            border-radius:12px ;
+           }
+
+           caption{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(0, 81, 255);
+            margin-bottom: 20px;
+           }
+
+           th, td{
+            padding: 20px;
+            text-align: left;
+            font-size: 1rem;
+            border-bottom: 1px solid #00438a;
+           }
+
+           th{
+            background-color: aquamarine;
+            color: aliceblue;
+            text-transform: uppercase;
+           }
+
+           thead tr{
+            border-bottom: 3px solid #333;
+           } 
+
+           tbody tr:hover{
+            background-color: cornsilk;
+           }
+
+           tfoot{
+            background-color: floralwhite;
+           }
+
+           tfoot{
+            border-top: 2PX solid #333;
+           }
+    </style>
+</head>
+<body>
+       <table>
+              <caption>produtos</caption>
+              <thead>
+                   <tr>
+                      <th>Produtos</th>
+                      <th>preço</th>
+                      <th>Quantidade</th>
+                      <th>total</th>
+                   </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                    <td>iPad</td>
+                    <td>R$3,289,00</td>
+                    <td>5</td>
+                    <td>R$16,455,00</td>
+                 </tr>
+                 <tr>
+                    <td>sansung S26</td>
+                    <td>R$5,500,00</td>
+                    <td>3</td>
+                    <td>R$16,500,00</td>
+                 </tr>
+              </tbody>
+              <tfoot>
+                    <td colspan="3">Total</td>
+                    <td>R$32.955,00</td>
+              </tfoot>
+       </table>
+    
+</body>
+</html>

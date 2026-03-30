@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: azure;
+            color:#333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: columm;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+         
+        h1{
+            font-size:2.5rem;
+            color: #00bcd4;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 1.8rem;
+            color: #00bcd4;  
+            margin:20px;
+            text-transform: uppercase;
+        }
+
+     ol, ul, dl{
+         margin: 0;
+         padding: 0;
+         list-style-position: inside;
+         width: 100%;
+         max-width: 600px;
+     }
+     ol li, ul li{
+        background-color: #00bcd4;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     }
+
+     ol il:hover, ul li:hover{
+        transform: translatey(-5px);
+        background-color: #00bcd4;
+        color: aliceblue;
+     }
+
+     dl dt{
+        font-weight: bold;
+        color: aliceblue;
+        margin-top: 20px;
+     }
+
+
+
+   </style>
+</head>
+<body>
+    <h1>Listas</h1>
+    <h2>Aprovador</h2>
+    <ol>
+        <li>Bia</li>
+        <li>Pedro</li>
+        <li>Ana</li>
+        <li>joão</li>
+    </ol>
+
+
+    <ul>
+        <li>Queijo</li>
+        <li>Leite</li>
+        <li>Arroz</li>
+        <li>Pão</li>
+    </ul>
+
+    <h2>Principais termos do glossário de Colud Counputing</h2>
+    <dl>
+        <dt>BaaS</dt>
+        <dd>Backend Como Serviços</dd>
+        <dt>IaaS</dt>
+        <dd>Infraestrutura Como Serviço</dd>
+        <dt>PaaS</dt>
+        <dd>Plataformas Como Serviços</dd>
+        <dt>SaaS</dt>
+        <dd>Software Como Serviços</dd>
+    </dl>
+</body>
+</html>
