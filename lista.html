@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: columm;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
@@ -57,16 +57,41 @@
 
      dl dt{
         font-weight: bold;
-        color: aliceblue;
+        color: rgb(0, 38, 255);
         margin-top: 20px;
      }
 
+     dl dd{
+        padding: 8px 16px;
+        background-color: blue;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+     }
+
+     dl dd:hover{
+       transform: translateY(-5px);
+       background-color:#ffffff;
+       color: aquas;
+
+     }
+
+     h1, h2, ol, li, ul li, dl dd{
+        transition:transform 0.3s ease, backgroud-color 0.10 ease;
+     }
+
+     h1:hover, h2:hover, ol li:hover, ul li:hover, dl dd:hover{
+        box-shadow: 0 6px 12px rgba(0, 188, 212, 0.3);
+     }
+     
 
 
    </style>
 </head>
 <body>
     <h1>Listas</h1>
+    
     <h2>Aprovador</h2>
     <ol>
         <li>Bia</li>
