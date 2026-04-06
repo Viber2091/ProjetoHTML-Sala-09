@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .circular{
+            width: 513px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .texto{
+            width: 400px;
+        }
+
+        .texto img{
+            margin-right: 10px;
+        }
+
+        .cidade{
+            width: 513px;
+            height: 342px;
+            background-image: url("http://files.cod3r.com.br/imagem4.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200%;
+        }
+     </style>
+</head>
+<body>
+    <div wm-slider>
+
+        <p>
+            <img src="https://static.wikia.nocookie.net/marveldatabase/images/4/4e/Richard_Rider_%28Earth-821236%29_from_What_If%3F_Vol_1_36_001.jpg/revision/latest/scale-to-width-down/150?cb=20210809060132"
+             alt="Nova Marvel"
+             width="245" height="342"
+             title="Nova Richard Rider">
+        </p>
+
+        <p>
+            <img src="https://static.wikia.nocookie.net/marveldatabase/images/6/67/Nova_Vol_1_1_Textless.jpg/revision/latest?cb=20190724191730"
+            alt="Nova Richard Rider" height="342">
+        </p>
+
+        <p class="circular">
+            <img src="https://static.wikia.nocookie.net/marveldatabase/images/f/f7/Nova_Vol_1_5.jpg/revision/latest?cb=20200109023036"
+          alt="nova richard rider height="342">
+        </p>
+
+        <p class="texto">
+            <img src="https://files.cod3r.com.br/curso-web/avatar.jpg"
+            alt="avatar" height="50" align="left">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae inventore obcaecati ducimus magni eum deserunt quibusdam. Numquam quam quos veniam laudantium ex! Culpa aliquid debitis obcaecati quam accusamus? Tempora, aliquam!
+      
+        </p>
+
+        <P class="cidade"></P>
+    </div>
+    <script>
+        function mover(elem, inicio, fim, passo, callback){
+            const novoInicio = inicio - passo;
+
+            if(novoInicio >=fim){
+                elem.style.left = novoInicio = 'px';
+                setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+            }else{
+                 callback(); 
+            }
+        }
+
+        function slider(){
+            const elementos = document.queryselectorAll('[wm-slider] > p')
+            const slides = Array.from(elementos);
+            exibirSlide(slides, slide[0]);
+        }
+
+        function exibirSlide(slides, slide){
+            slide.style.display = 'block';
+
+            const inicio = innerWidth;
+            const fim = slide.clientwidth;
+
+            slide.style.left = `${inicio}px`;
+
+            mover(slide, inicio, fim, 5, () =>{
+                slide.style.display = 'none';
+                exibirSlide(slide, getProximo(slides, slide))
+            })
+        }
+
+        function getProximo(lista, atual){
+            const i = lsta.indexOF(atual)+1;
+            return i < lista.legth ? listas[i] : listas[0];
+
+            }
+
+            const p = document.querySelector('[wm-slider] > p')
+            p.style.display = ' block'
+            mover(p, 1500, -520, 5, () =>{
+                console('!!!!')
+            })
+ 
+            slider();
+    </script>
+</body>
+</html>
