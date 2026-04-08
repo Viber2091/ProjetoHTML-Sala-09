@@ -4,6 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
+    <style>
+  
+         body{
+            font-family: Arial,Helvetica,sans-serif;
+            margin: 150px;
+            padding: 150px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+         }
+
+          .form-container{
+                 background-color: rgb(246, 249, 252);
+                 border-radius:20px;
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                 padding: 30px;
+                 width: 100%;
+                 max-width: 400px;
+                 
+          }
+
+          h1{
+            text-align: center ;
+            color: black;
+            margin-bottom: 30px;
+
+          }
+
+          form{
+            display:flex;
+            flex-direction: column;
+          }
+
+          .form-group{
+            margin-bottom: 20px;
+          }
+
+          label{
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+          }
+
+          input,
+          textarea,
+          select,
+          button{
+            width: 100%;
+            padding: 12px;
+            margin-top:5px;
+            border: 1px solid #fff;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+
+          }
+
+          input[type="radio"],
+          input[type="checkbox"]{
+            display:inline-block ;
+            width: auto;
+            transition: background-color 0.3s;
+          }
+          button:hover{
+            background-color: antiquewhite;
+          }
+
+          select,
+          textarea{
+            transition: border-color 0.3s;
+          }
+          
+          input:focus,
+          textarea:focus,
+          select:focus{
+            border-color:aliceblue;
+            outline: none;
+          }
+
+          fildset{
+            border: none;
+            padding: 0;
+          }
+
+          legend{
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .buttons{
+            display: flex;
+            justify-content: space-between,
+            }
+
+    </style>
 </head>
 <body>
     <div class ="form-container">
@@ -23,17 +120,61 @@
             </div>
 
             <div class="form-group">
-              <label for="bio">BIo</label>
-              <textarrea name="bio" id="bio" cols="30" rows="10" placeholder="Conte um pouco sobre você"></textarrea>
+              <label for="bio">Bio</label>
+              <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Conte um pouco sobre você"></textarea>
             </div>
+
             <fieldset class="form-group">
                 <legend>Tipo de usuarío</legend>
                 <label for="admin">
                     <input type="radio" name="tipo" id="admin" value="admin">admin
                 </label>
-                <input type="radio" name="regular"
+                <label for="professor">
+                <input type="radio" name="regular" id="professor" value="Professor">Professor
+                </label>
             </fieldset>
-            
+
+             <div class="form-group">
+                <label for="ativo">
+                    <input type="chaeckbox" name="ativo" id="ativo">ativo
+                </label>
+             </div> 
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <select name="estado" id="id">
+                    <option value="">selecione</option>
+                    <option value="ac">Acre</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceara</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pr">Paraná</option>
+                    <option value="rs">Rio Grande Do Sul</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                </select>
+            </div>  
+
+            <div class="form-group">
+                <label for="interesses">interesses</label>
+                <select name="interesses" id="interesses" multiple.size="7">
+                    <option value="js">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="go">Go</option>
+                    <option value="c">C</option>            
+                </select>
+            </div>
+
+            <div class="form-group button">
+                <button type="submit">Incluir</button>
+                <button 
+                formaction="http://localhost:3003/usuarios/3"
+                type="submit"
+              > Alterar</button>
+            </div>
         </form>
     </div>
 </body>
